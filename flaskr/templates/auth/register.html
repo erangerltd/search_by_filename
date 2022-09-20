@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}ユーザー登録{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <div class="row">
+      <div class="col-lg-2">
+        <label for="username" class="col-form-label">ユーザー名</label>
+      </div>
+      <div class="col-lg-4">
+        <input name="username" id="username" class="form-control" required>
+      </div>
+    </div> <!-- e.o.row-->
+    <div class="row">
+      <div class="col-lg-2">
+        <label for="password" class="col-form-label">パスワード</label>
+      </div>
+      <div class="col-lg-4">
+        <input type="password" name="password" class="form-control" id="password" required>
+      </div>
+    </div> <!-- e.o.row-->
+    <div class="row">
+      <div class="col-lg-3">
+        <button class="btn btn-primary" type="submit">登録</button>
+      </div>
+    </div> <!-- e.o.row-->
+  </form>
+{% endblock %}

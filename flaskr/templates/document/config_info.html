@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}設定パラメータ（config-info）{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+  <h4>検索対象文字列</h4>
+  <div class="row">
+    <article class="col-lg-3 post">
+      <p class="body">{{ parms["doc_key"] }}</p>
+    </article>
+  </div>
+  
+  <br>
+  <h4>検索するフォルダー</h4>
+    {% for _f in parms["doc_path"] %}
+    <article class="post">
+      <p class="body">{{ _f }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+
+  <br>
+  <h4>検索するファイル拡張子</h4>
+    {% for _f in parms["doc_format"] %}
+    <article class="post">
+      <p class="body">{{ _f }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+
+  {% endblock %}

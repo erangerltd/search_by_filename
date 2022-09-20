@@ -1,0 +1,186 @@
+html {
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem;
+  }
+  
+  body {
+/*    max-width: 95%;*/
+    font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    background: white;
+    color: #666
+  }
+
+  body.container {
+    padding : 0;
+  }
+  
+  h1{
+    padding: 5px 0 5px 10px ;
+    border-left-width: 5px ;
+    border-left-style: solid ;
+    border-left-color: #6495ED;
+    font-size: 2rem
+  }
+
+  h2{
+    padding: 2px 0 2px 10px ;
+    border-left-width: 3px ;
+    border-left-style: solid ;
+    border-left-color: #6495ED;
+    margin-left: -5px;
+    font-size: 1.5rem
+  }
+  
+  a {
+    text-decoration: none;
+    color: #666;
+/*    color: #377ba8;*/
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid lightgray;
+  }
+  
+  nav {
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+  
+  nav h1 {
+    flex: auto;
+    margin: 0;
+  }
+  
+  nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  nav ul  {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a, nav ul li span, header .action {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  .content {
+    padding: 1rem 1rem 1rem;
+  }
+  
+  .content > header {
+/*    border-bottom: 1px solid lightgray;*/
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .content > header h1 {
+    flex: auto;
+    margin: 1rem 0 0.25rem 0;
+  }
+  
+  .flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+  }
+  
+  .post > header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+  }
+  
+  .post > header > div:first-of-type {
+    flex: auto;
+  }
+  
+  .post > header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  
+  .post .about {
+    color: slategray;
+    font-style: italic;
+  }
+  
+  .post .body {
+    white-space: pre-line;
+  }
+  
+  .content:last-child {
+    margin-bottom: 0;
+  }
+  
+  .content form {
+    margin: 1em 0 2em 0;
+    display: block;
+  }
+  
+  .content label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  .content input, .content textarea {
+    margin-bottom: 1em;
+  }
+  
+  .content textarea {
+    min-height: 12em;
+    resize: vertical;
+  }
+  
+  input.danger {
+    color: #cc2f2e;
+  }
+  
+/*  input[type=submit], button[type=submit].top {
+    min-height: 2em;
+    width: 10em;
+  }
+
+  button[type=submit]:not(.top) {
+    margin-left: 1em;
+    width: 10em;
+    min-height: 2em;
+  }
+*/
+  article a {
+    border-bottom:1px dotted #666;
+  }
+
+  .leftcolor-blue1{
+    padding-left: 10px ;
+    border-left-width: 5px ;
+    border-left-style: solid ;
+    border-left-color: #6495ED;
+  }
+  
+  .leftcolor-blue1{
+    padding-left: 10px ;
+    border-left-width: 3px ;
+    border-left-style: solid ;
+    border-left-color: #6495ED;
+  }
+
+  .leftcolor-blue5{
+    padding-left: 10px ;
+    border-left-width: 5px ;
+    border-left-style: solid ;
+    border-left-color: #6495ED;
+  }

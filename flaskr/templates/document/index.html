@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="post">
+    <div class="row">
+      <label for="sdate" class="col-lg-3 col-form-label">日付（yyyymmdd）</label>
+      <div class="col-lg-3">
+        <input name="sdate" id="sdate" class="form-control" value="{{ request.form['sdate'] or sdate}}" required>
+      </div>
+      -
+      <div class="col-lg-3">
+          <input name="edate" id="edate" class="form-control" value="{{ request.form['edate'] }}">
+      </div>
+    </div> <!-- e.o.row-->
+    <div class="row">
+      <label for="word" class="col-lg-3 col-form-label">フリーワード</label>
+      <div class="col-lg-9">
+        <input name="word" id="word" class="form-control" value="{{ request.form['word'] }}">
+      </div>
+    </div> <!-- e.o.row-->
+    <div class="row">
+      <div class="col-lg-6">
+        <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i>絞り込む</button>
+        &nbsp;
+        <button class="btn btn-success" type="submit" formaction="csv"><i class="bi bi-filetype-csv"></i>CSV</button>
+      </div>
+    </div> <!-- e.o.row-->
+  </form>
+  <p>
+    {{ emsg }}
+  </p>
+
+  {% for _f in paths %}
+    <article class="post">
+      <p class="body"><a href="{{ _f['link'] }}"><i class="bi bi-download"></i>&nbsp;{{ _f['path'] }}</a></p>
+      <p class="body">{{ _f['size'] }}KiB,&nbsp; 最終変更日時: {{ _f['mtime'] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
