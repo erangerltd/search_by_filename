@@ -39,3 +39,30 @@ Linuxファイルサーバー（Samba）の利用を想定しています。
 Python3が導入されていること   
 Flaskが利用可能なこと   
 
+## ライセンス
+MITライセンス  
+なお、コードの多くは[Flaskのチュートリアル](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/tutorial/index.html)からお借りしました。
+
+
+## 初期設定
+設定ファイルは`instances/dencho_config.json`です。  
+  
+
+    {
+        "DOC_KEY": "###",
+        "DOC_FORMAT":[
+            "pdf", "png", "jpg"
+        ],
+        "DOC_PATH":[
+            "/disk1/share/KD.経理保管資料/電子帳簿保存法"
+        ]
+    }
+
+- DOC_KEY: ファイルを検索対象とするためのマーカーです（上記）
+- DOC_FORMAT: 検索対象とする拡張子です
+- DOC_PATH: 検索対象とするディレクトリ（絶対パス）です。
+
+
+## 起動
+
+
