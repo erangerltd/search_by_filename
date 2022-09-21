@@ -68,8 +68,17 @@ MITライセンス
 - DOC_FORMAT: 検索対象とする拡張子です
 - DOC_PATH: 検索対象とするディレクトリ（絶対パス）です。
   
+
+データベースSQLiteの初期化  
+`Flask`がうごく環境で以下のようにSQLiteを初期化してください。
   
+    
+    export FLASK_APP=flaskr
+    flask init-db
+
+
   
+
 ## 起動
 
 
