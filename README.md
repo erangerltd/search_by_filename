@@ -3,6 +3,7 @@
 ![ファイル名検索](https://s3.ap-northeast-1.amazonaws.com/media-new.eranger.co.jp/wp-content/uploads/20220921113907/screen_of_searchbyfilename.png )
 
   
+
 ## 目的
 電子帳簿保存法（2022/1/1施行。2023/12/31まで宥恕期間）における電子取引情報に関する要求のうち、  
 - 「⽇付・⾦額・取引先」で検索できるようにする  
@@ -13,6 +14,7 @@
 電子帳簿保存法やその要求・解釈については、詳しくは国税庁のホームページをご参照ください。   
 - [国税庁パンフレット](https://www.nta.go.jp/publication/pamph/sonota/0021011-068.pdf)
 - [国税庁電子帳簿保存法一問一答 電子取引関連](https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/pdf/0022006-083_06.pdf)
+  
   
 
 ## 機能
@@ -33,16 +35,20 @@
 - ファイルリストからのデータダウンロード機能
 - 最終登録更新日時、ファイルサイズ表示機能
 
+  
 
 ## 稼働環境
 Linuxファイルサーバー（Samba）の利用を想定しています。   
 Python3が導入されていること   
 Flaskが利用可能なこと   
+  
+
 
 ## ライセンス
 MITライセンス  
 なお、コードの多くは[Flaskのチュートリアル](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/tutorial/index.html)からお借りしました。
-
+  
+  
 
 ## 初期設定
 設定ファイルは`instances/dencho_config.json`です。  
@@ -61,8 +67,9 @@ MITライセンス
 - DOC_KEY: ファイルを検索対象とするためのマーカーです（上記）
 - DOC_FORMAT: 検索対象とする拡張子です
 - DOC_PATH: 検索対象とするディレクトリ（絶対パス）です。
-
-
+  
+  
+  
 ## 起動
 
 
