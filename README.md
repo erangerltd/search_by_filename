@@ -51,8 +51,12 @@ MITライセンス
   
 
 ## 初期設定
+python3で`Flask`が実行できる環境であれば、アプリケーションはソースコードを配備するだけで稼働します。  
+以下ではアプリケーションを配備したディレクトリを`$APP_PATH`と呼びます。
+  
+
 ### 設定ファイルの説明
-設定ファイルは`instances/dencho_config.json`です。  
+設定ファイルが`$APP_PATH/instances/dencho_config.json`にあります。ご利用環境に合わせて変更してください。
   
 
     {
@@ -61,7 +65,7 @@ MITライセンス
             "pdf", "png", "jpg"
         ],
         "DOC_PATH":[
-            "/disk1/share/KD.経理保管資料/電子帳簿保存法"
+            "/home/経理保管資料/電子帳簿保存法"
         ]
     }
 
@@ -71,7 +75,7 @@ MITライセンス
   
 
 ### データベース（SQLite）の初期化  
-`Flask`がうごく環境で以下のようにSQLiteを初期化してください。
+`$APP_PATH`にて以下のようにSQLiteデータベースを初期化してください。
   
     
     export FLASK_APP=flaskr
@@ -81,5 +85,27 @@ MITライセンス
   
 
 ## 起動
+### 起動
+`$APP_PATH`で以下のように起動します。  
+以下ではport番号=12345で起動しています。
+    
+    export FLASK_APP=flaskr
+    flask run --host=0.0.0.0 --port=12345
+
+以下のようなメッセージが出ればアプリケーションは稼働しています。  
+警告`WARNING`が出ますが、プロダクションユースであればちゃんとしたHTTPサーバーを使うべきであるという意味ですので、アプリケーションを試用する分には問題ありません。  
+  
+    * Serving Flask app "flaskr"
+    * Environment: production
+    WARNING: This is a development server. Do not use it in a production deployment.
+    Use a production WSGI server instead.
+    * Debug mode: off
+
+
+### ユーザー登録
+
+
+### ログインとファイル名の一覧
+
 
 
