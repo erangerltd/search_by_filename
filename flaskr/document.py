@@ -281,14 +281,3 @@ def config_info():
 
     return render_template('document/config_info.html', parms=_f)
 
-##
-#   アプリのconfig情報を全て表示する。
-#
-## 
-@bp.route('/app-config-info')
-@login_required
-def app_config_info():
-    _f = dict()
-    _f = current_app.config
-    return render_template('document/app_config_info.html', parms=_f)
-
