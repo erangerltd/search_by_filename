@@ -1,4 +1,4 @@
-# ファイル名検索（電子帳簿）
+# ファイル名検索（電子帳簿保存法支援）
 
 ![ファイル名検索](https://s3.ap-northeast-1.amazonaws.com/media-new.eranger.co.jp/wp-content/uploads/20220921113907/screen_of_searchbyfilename.png )
 
@@ -8,7 +8,7 @@
 電子帳簿保存法（2022/1/1施行。2023/12/31まで宥恕期間）における電子取引情報に関する要求のうち、  
 - 「⽇付・⾦額・取引先」で検索できるようにする  
   
-を満たすことが意外と大変なため、これを補助するために作っています。
+を満たすことが意外と大変なため、これを補助するためのアプリケーションです。
 改ざん防止、改ざんの検知の機能はありませんのでご注意ください。  
   
 電子帳簿保存法やその要求・解釈については、詳しくは国税庁のホームページをご参照ください。   
@@ -84,7 +84,7 @@ python3で`Flask`が実行できる環境であれば、アプリケーション
 
   
 
-## 起動
+## アプリケーションの起動
 ### 起動
 `$APP_PATH`で以下のように起動します。  
 以下ではport番号=12345で起動しています。
@@ -100,6 +100,11 @@ python3で`Flask`が実行できる環境であれば、アプリケーション
     WARNING: This is a development server. Do not use it in a production deployment.
     Use a production WSGI server instead.
     * Debug mode: off
+  
+
+ブラウザーより指定したポートにアクセスするとログイン画面が表示されます。
+  
+![ログイン](https://s3.ap-northeast-1.amazonaws.com/media-new.eranger.co.jp/wp-content/uploads/20220922102644/dencho-login.png )
 
 
 ### ユーザー登録
