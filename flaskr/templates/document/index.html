@@ -13,6 +13,16 @@
       </div>
     </div> <!-- e.o.row-->
     <div class="row">
+      <label for="samount" class="col-lg-3 col-form-label">金額</label>
+      <div class="col-lg-3">
+        <input name="samount" id="samount" class="form-control" value="{{ request.form['samount'] or samount}}" required>
+      </div>
+      -
+      <div class="col-lg-3">
+          <input name="eamount" id="eamount" class="form-control" value="{{ request.form['eamount'] }}">
+      </div>
+    </div> <!-- e.o.row-->
+    <div class="row">
       <label for="word" class="col-lg-3 col-form-label">フリーワード</label>
       <div class="col-lg-9">
         <input name="word" id="word" class="form-control" value="{{ request.form['word'] }}">
@@ -26,13 +36,13 @@
       </div>
     </div> <!-- e.o.row-->
   </form>
-  <p>
+  <p class="emsg">
     {{ emsg }}
   </p>
 
   {% for _f in paths %}
     <article class="post">
-      <p class="body"><a href="{{ _f['link'] }}"><i class="bi bi-download"></i>&nbsp;{{ _f['path'] }}</a></p>
+      <p class="body">{{ loop.index }}.&nbsp;<a href="{{ _f['link'] }}"><i class="bi bi-download"></i>&nbsp;{{ _f['path'] }}</a></p>
       <p class="body">{{ _f['size'] }}KiB,&nbsp; 最終変更日時: {{ _f['mtime'] }}</p>
     </article>
     {% if not loop.last %}

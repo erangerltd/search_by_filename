@@ -184,3 +184,7 @@ html {
     border-left-style: solid ;
     border-left-color: #6495ED;
   }
+
+  .emsg {
+    color:red;
+  }
