@@ -97,7 +97,7 @@ def create_datalist(word, sdate, edate, samount, eamount):
     _l = list()
     for _t in current_app.config["DOC_PATH"]:
         # https://www.curict.com/item/48/4807c14.html
-        for root, dirs, files in os.walk(top=_t):
+        for root, dirs, files in os.walk(top=_t, followlinks=True):
             for file in files:
                 if not file.startswith(('.')) \
                     and file.endswith(tuple(current_app.config["DOC_FORMAT"])) \
